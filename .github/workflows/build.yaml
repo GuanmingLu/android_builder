@@ -10,10 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
     
-      - name: Setup JDK
-        uses: actions/setup-java@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v4
         with:
-          java-version: '11'
+          distribution: 'zulu'
+          java-version: 17
 
       - id: get-project
         name: Get project name
